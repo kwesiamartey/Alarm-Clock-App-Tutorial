@@ -58,7 +58,8 @@ class MainActivity : ComponentActivity() {
                             .padding(it)
                             .fillMaxSize(),
                         contentAlignment = Alignment.Center
-                    ) {
+                    )
+                    {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
                             HeaderComponent()
 
@@ -109,7 +110,8 @@ fun NavigationBarComponent() {
             )
             .clip(RoundedCornerShape(topStart = 10.dp, topEnd = 10.dp)),
         containerColor = NavigationBarColor
-    ) {
+    )
+    {
         NavigationBarItem(icon = {
             Icon(
                 painter = painterResource(id = R.drawable.ic_outline_alarm_24),
@@ -153,7 +155,7 @@ fun DigitalClockComponent(
         text = "$hour:$minute $amOrPm", style = MaterialTheme.typography.titleLarge
     )
     Text(
-        text = "Berlin, Germany", style = MaterialTheme.typography.bodyMedium.merge(
+        text = "Current time", style = MaterialTheme.typography.bodyMedium.merge(
             TextStyle(
                 color = MaterialTheme.colorScheme.onBackground.copy(
                     alpha = 0.6f
